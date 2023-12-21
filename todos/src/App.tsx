@@ -1,11 +1,18 @@
 /** @format */
 
-import { Button } from "@/components/ui/button";
+import MainLayout from "./cors/components/mainLayout";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/dashboard";
 
 function App() {
+
   return (
     <>
-      <Button>Click me</Button>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route path="dashboard" element={<Dashboard />} />
+        </Route>
+      </Routes>
     </>
   );
 }
